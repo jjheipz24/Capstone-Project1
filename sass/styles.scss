@@ -1,29 +1,35 @@
-$primary-font: Arial, Helvetica, sans-serif; //import actual font
+$primary-font: Arial,
+Helvetica,
+sans-serif; //import actual font
 
-html{
+html {
     height: 100%;
 }
 
-#root{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 28vw 20px auto;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "filters . portfolios";
-    grid-auto-flow: column;
+// #root{
+//     width: 100%;
+//     height: 100%;
+//     display: grid;
+//     grid-template-columns: 28vw 20px auto;
+//     grid-template-rows: auto;
+//     grid-template-areas:
+//     "filters . portfolios";
+//     grid-auto-flow: column;
+// }
+
+// #filters-container{
+//     grid-area: filters;
+//     background-color: gray;
+// }
+
+// #portfolio-section{
+//     grid-area: portfolios;
+//     //background-color: darkgray;
+// }
+.pfp {
+    width: 32px;
 }
 
-#filters-container{
-    grid-area: filters;
-    background-color: gray;
-}
-
-#portfolio-section{
-    grid-area: portfolios;
-    //background-color: darkgray;
-}
 h2 {
     font-family: $primary-font;
 }

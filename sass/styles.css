@@ -2,30 +2,8 @@ html {
   height: 100%;
 }
 
-#root {
-  width: 100%;
-  height: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 28vw 20px auto;
-      grid-template-columns: 28vw 20px auto;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-      grid-template-areas: "filters . portfolios";
-  grid-auto-flow: column;
-}
-
-#filters-container {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: filters;
-  background-color: gray;
-}
-
-#portfolio-section {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: portfolios;
+.pfp {
+  width: 32px;
 }
 
 h2 {
