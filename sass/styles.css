@@ -26,7 +26,6 @@ html {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: portfolios;
-  background-color: darkgray;
 }
 
 h2 {
