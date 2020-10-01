@@ -34,6 +34,16 @@ let app = new Vue({
             link: "https://sophiazapata.com/"
         },
     
-    ]
+    ],
+        sidebars: [{
+            title: 'RIT Portfolios',
+            search: 'searchbarhere',
+            major: 'Major',
+            year: 'Year',
+            skills: 'Skills',
+            job: 'Job Type'
+        },
+        //insert majors, year, skills, job filters
+    ],
     },
 });

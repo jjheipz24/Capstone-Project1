@@ -28,3 +28,65 @@ Vue.component('portfolio-slat', {
                     </div>
             </div>`
 });
+
+//filtering component
+Vue.component('portfolio-sidebar', {
+    props: ['title', 'search', 'refine', 'major', 'year', 'skills', 'job'],
+    template: `<div>
+                    <div class="nav-content">
+                        <h1 class="title">{{title}}</h1>
+
+                    <form class="searchbar">
+                        <div class="searchbar-input">
+                        <input type="search" placeholder="Search in items">
+                        <a href="#" class="searchbar-clear"></a>
+                        </div>
+                    </form>
+                        <h2 class="refine">Refine your search</h2>
+                        <div class="categories">
+                        <b-dropdown class="categories" text="Major">
+                            <b-dropdown-item>New Media Design</b-dropdown-item>
+                            <b-dropdown-item>New Media Interactive Development</b-dropdown-item>
+                            <b-dropdown-divider></b-dropdown-divider>
+                            <b-dropdown-item>College of Arts</b-dropdown-item>
+                            <b-dropdown-divider></b-dropdown-divider>
+                            </b-dropdown>
+                        </div>
+
+                        <div class="categories">
+                        <b-dropdown class="categories" text="Year">
+                            <b-dropdown-item>First Year</b-dropdown-item>
+                            <b-dropdown-item>Second Year</b-dropdown-item>
+                            <b-dropdown-item>Third Year</b-dropdown-item>
+                            <b-dropdown-item>Fourth Year</b-dropdown-item>
+                            <b-dropdown-item>Fifth Year</b-dropdown-item>
+                            <b-dropdown-item>Grad Student</b-dropdown-item>
+                            <b-dropdown-divider></b-dropdown-divider>
+                            </b-dropdown>
+                        </div>
+
+                        <div class="categories">
+                        <b-dropdown class="categories" text="Skills">
+                            <b-dropdown-item>New Media Design</b-dropdown-item>
+                            <b-dropdown-item>New Media Interactive Development</b-dropdown-item>
+                            <b-dropdown-divider></b-dropdown-divider>
+                            <b-dropdown-item>College of Arts</b-dropdown-item>
+                            <b-dropdown-divider></b-dropdown-divider>
+                            </b-dropdown>
+                        </div>
+
+                        <div class="categories">
+                        <b-dropdown class="categories" text="Job Type">
+                            <b-dropdown-item>New Media Design</b-dropdown-item>
+                            <b-dropdown-item>New Media Interactive Development</b-dropdown-item>
+                            <b-dropdown-divider></b-dropdown-divider>
+                            <b-dropdown-item>College of Arts</b-dropdown-item>
+                            <b-dropdown-divider></b-dropdown-divider>
+                            </b-dropdown>
+                        </div>
+                    </div>
+               </div>`
+});
+
+
+

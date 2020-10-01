@@ -9,6 +9,7 @@
     <!-- Load required Bootstrap and BootstrapVue CSS -->
     <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/vue-navigation-bar@1.0.0/dist/vue-navigation-bar.css">
 
     <!-- Load polyfills to support older browsers -->
     <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous">
@@ -17,6 +18,7 @@
     <!-- Load Vue followed by BootstrapVue -->
     <script src="//unpkg.com/vue@latest/dist/vue.min.js"></script>
     <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+    <script src="https://unpkg.com/vue-navigation-bar@1.0.0/dist/vue-navigation-bar.min.js"></script>
 
     <!-- Load the following for BootstrapVueIcons support -->
     <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
@@ -26,10 +28,16 @@
 </head>
 
 <body>
-    <b-container id="root" fluid>
+    
+<b-container id="root" fluid>
+    
         <div id="filters-container">
             <!--Insert filter menu here-->
+            <div v-for="sidebar in sidebars">
+                <portfolio-sidebar :title="sidebar.title" :search="sidebar.search" :refine="sidebar.refine" :major="sidebar.major" :year="sidebar.year" :skills="sidebar.skills" :job="sidebar.job"></portfolio-sidebar>
+            </div>
         </div>
+    
         <div id="portfolio-section">
             <div v-for="portfolio in portfolios">
                 <portfolio-slat :pfp="portfolio.pfp" :major="portfolio.major" :name="portfolio.name" :blurb="portfolio.blurb" :chips="portfolio.chips" :photo1="portfolio.photo1" :photo2="portfolio.photo2" :link="portfolio.link"></portfolio-slat>
