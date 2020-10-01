@@ -86,6 +86,7 @@ body {
 }
 
 .info .name {
+  font-size: 24px;
   color: #222222;
   padding-top: 3px;
   font-family: Neue Bold;
