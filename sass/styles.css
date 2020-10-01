@@ -15,8 +15,14 @@
 
 html {
   height: 100%;
+  min-width: 100%;
   font-family: Neue Regular, Arial, Helvetica, sans-serif;
   font-size: 14px;
+}
+
+body {
+  height: 100%;
+  min-width: 100%;
 }
 
 #root {
@@ -31,13 +37,15 @@ html {
       grid-template-areas: "filters . portfolios";
   grid-auto-flow: column;
   font-family: Neue Regular, sans-serif;
+  padding: 0;
 }
 
 #filters-container {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: filters;
-  background-color: gray;
+  background-color: #FAFAFA;
+  border-right: 1px solid #cfcfcf;
 }
 
 #portfolio-section {
@@ -45,6 +53,7 @@ html {
   -ms-grid-column: 3;
   grid-area: portfolios;
   width: 100%;
+  padding-top: 20px;
 }
 
 .portfolio-content {
@@ -119,6 +128,8 @@ html {
 
 .photo-holder img {
   padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .photo-holder .view-portfolio {
