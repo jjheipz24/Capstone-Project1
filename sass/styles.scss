@@ -8,28 +8,28 @@ html {
     font-size: 14px;
 }
 
-#root{
+#root {
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: 25vw 20px auto;
     grid-template-rows: auto;
     grid-template-areas:
-    "filters . portfolios";
+        "filters . portfolios";
     grid-auto-flow: column;
 }
 
-#filters-container{
+#filters-container {
     grid-area: filters;
     background-color: gray;
 }
 
-#portfolio-section{
+#portfolio-section {
     grid-area: portfolios;
     width: 100%;
 }
 
-.portfolio-content{
+.portfolio-content {
     display: flex;
     flex-direction: row;
     padding-top: 50px;
@@ -40,16 +40,17 @@ html {
     width: 64px;
 }
 
-.info{
+.info {
     display: flex;
     flex-direction: column;
     width: 28vw;
     padding: 0 20px;
-    .name{
+
+    .name {
         color: #222222;
     }
-    
-    .chip{
+
+    .chip {
         background-color: #f4f4f4;
         padding: 5px;
         border-radius: 8px;
@@ -57,13 +58,13 @@ html {
 }
 
 //Container div around portfolio pictures
-.photo-holder{
+.photo-holder {
     width: 260px;
     height: 180px;
     border-radius: 8px;
     margin: 0 10px;
 
-    img{
+    img {
         padding: 0;
     }
 }
