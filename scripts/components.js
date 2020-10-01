@@ -11,7 +11,7 @@ Vue.component('portfolio-slat', {
                             <span class="major">{{ major }}</span>
                             <h2 class="name">{{ name }}</h2>
                             <p class="bio">{{ blurb }}</p>
-                            <div v-for="chip in chips">
+                            <div class="chip-container" v-for="chip in chips">
                             <span class="chip">{{chip}}</span>
                             </div>
                         </div>
@@ -20,8 +20,9 @@ Vue.component('portfolio-slat', {
                         </div>
                         <div class="photo-holder">
                             <b-img thumbnail fluid v-bind:src="photo2" alt="Second project image"></b-img>
+                            <a class="view-portfolio" v-bind:href="link">View Portfolio ></a>
                         </div>
-                        <a v-bind:href="link">View Portfolio</a>
+                        
                     </div>
             </div>`
 });
