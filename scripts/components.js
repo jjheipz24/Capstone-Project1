@@ -11,8 +11,10 @@ Vue.component('portfolio-slat', {
                             <span class="major">{{ major }}</span>
                             <h2 class="name">{{ name }}</h2>
                             <p class="bio">{{ blurb }}</p>
-                            <div class="chip-container" v-for="chip in chips">
-                            <span class="chip">{{chip}}</span>
+                            <div class="chip-container">
+                                <div class="chips" v-for="chip in chips">
+                                    <span class="chip">{{chip}}</span>
+                                </div>
                             </div>
                         </div>
                         <div class="photo-holder">

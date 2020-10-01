@@ -1,7 +1,3 @@
-$primary-font: Arial,
-Helvetica,
-sans-serif; //import actual font
-
 @font-face {
     font-family: 'Neue Regular';
     src: url('neueregular.ttf') format('truetype');
@@ -15,6 +11,7 @@ sans-serif; //import actual font
     src: url('neuemedium.ttf') format('truetype');
   }
   
+  $primary-font: Neue Regular, sans-serif;
 
 html {
     height: 100%;
@@ -26,12 +23,12 @@ html {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 25vw 20px auto;
+    grid-template-columns: 25vw 5vw auto;
     grid-template-rows: auto;
     grid-template-areas:
         "filters . portfolios";
     grid-auto-flow: column;
-    font-family: Neue Regular;
+    font-family: $primary-font;
 }
 
 #filters-container {
@@ -48,6 +45,8 @@ html {
     display: flex;
     flex-direction: row;
     padding-top: 50px;
+    padding-bottom: 6vh;
+    border-bottom: 1px solid #cfcfcf;
 }
 
 //profile picture styles
@@ -58,7 +57,7 @@ html {
 .info {
     display: flex;
     flex-direction: column;
-    width: 28vw;
+    width: 25vw;
     padding: 0 20px;
 
     .name {
@@ -71,15 +70,25 @@ html {
         padding-top: 5px;
     }
 
+    //Container for all of the chips
     .chip-container {
-        white-space: nowrap;
-        display: inline-flex;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    //div around the spans of chips
+    //used for padding and margins
+    .chips{
+        padding: 5px 8px 5px 0;
+        margin-bottom: 5px;
     }
 
     .chip {
         background-color: #f4f4f4;
         padding: 5px;
         border-radius: 8px;
+        white-space: nowrap;
     }
 }
 
@@ -102,7 +111,7 @@ html {
         font-size: 16px;
     }
     .view-portfolio:hover {
-        color: #7a7a7a;
+        color: #222222;
         text-decoration: none;
       }
       
