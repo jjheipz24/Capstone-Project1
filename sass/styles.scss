@@ -2,9 +2,23 @@ $primary-font: Arial,
 Helvetica,
 sans-serif; //import actual font
 
+@font-face {
+    font-family: 'Neue Regular';
+    src: url('neueregular.ttf') format('truetype');
+}
+  @font-face {
+    font-family: 'Neue Bold';
+    src: url('neuebold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Neue Medium';
+    src: url('neuemedium.ttf') format('truetype');
+  }
+  
+
 html {
     height: 100%;
-    font-family: $primary-font;
+    font-family: Neue Regular, Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
 
@@ -17,6 +31,7 @@ html {
     grid-template-areas:
         "filters . portfolios";
     grid-auto-flow: column;
+    font-family: Neue Regular;
 }
 
 #filters-container {
@@ -48,6 +63,17 @@ html {
 
     .name {
         color: #222222;
+        padding-top: 3px;
+        font-family: Neue Bold;
+    }
+
+    .bio {
+        padding-top: 5px;
+    }
+
+    .chip-container {
+        white-space: nowrap;
+        display: inline-flex;
     }
 
     .chip {
@@ -67,4 +93,17 @@ html {
     img {
         padding: 0;
     }
+
+    .view-portfolio {
+        color:#F76902;
+        font-family: Neue Bold;
+        float: right;
+        padding: 15px;
+        font-size: 16px;
+    }
+    .view-portfolio:hover {
+        color: #7a7a7a;
+        text-decoration: none;
+      }
+      
 }
