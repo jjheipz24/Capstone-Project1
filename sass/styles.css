@@ -46,6 +46,7 @@ body {
   grid-area: filters;
   background-color: #FAFAFA;
   border-right: 1px solid #cfcfcf;
+  padding: 2vw;
 }
 
 #portfolio-section {
@@ -137,7 +138,7 @@ body {
   color: #F76902;
   font-family: Neue Bold;
   float: right;
-  padding: 15px;
+  margin: 15px;
   font-size: 16px;
 }
 
@@ -163,20 +164,16 @@ body {
   width: 100%;
 }
 
-/* Solid border */
-hr.solid {
-  border-top: 1px solid #bbb;
-  width: 85%;
-}
-
 .refine {
   font-size: 16px;
   color: #222222;
-  padding-top: 3px;
   font-family: Neue Bold;
+  border-bottom: 1px solid #cfcfcf;
+  padding-bottom: 15px;
   margin-left: 28px;
   margin-top: 30px;
-  font-weight: 900;
+  width: 75%;
+  font-weight: bold;
 }
 
 .searchterm {
@@ -185,7 +182,7 @@ hr.solid {
   margin: 20px 10px 10px 10px;
   padding-left: 27px;
   font-size: 13px;
-  width: 240px;
+  width: 18vw;
   height: 42px;
 }
 
@@ -193,6 +190,21 @@ hr.solid {
   color: #fafafa;
   border: 1px solid #fafafa;
   color: black;
+}
+
+#search-categories-container {
+  margin-bottom: 200px;
+}
+
+.add-portfolio {
+  color: #F76902;
+  font-family: Neue Bold;
+  font-size: 16px;
+}
+
+.add-portfolio:hover {
+  color: #222222;
+  text-decoration: none;
 }
 
 /* Filtering Mobile Styles */

@@ -9,7 +9,8 @@
     <!-- Load required Bootstrap and BootstrapVue CSS -->
     <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/vue-navigation-bar@1.0.0/dist/vue-navigation-bar.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://unpkg.com/vue-navigation-bar@1.0.0/dist/vue-navigation-bar.css">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <!-- Load polyfills to support older browsers -->
@@ -23,35 +24,16 @@
 
     <!-- Load the following for BootstrapVueIcons support -->
     <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
-    
+
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-    <title>RIT Portfolios - Rework</title>
+
+    <title>RIT Portfolios - Add a Portfolio</title>
 
 </head>
 
 <body>
-    
-<b-container id="root" fluid>
-    
-        <div id="filters-container">
-            <!--Insert filter menu here-->
-            <div id="search-categories-container" v-for="sidebar in sidebars">
-                <portfolio-sidebar :title="sidebar.title"></portfolio-sidebar>
-            </div>
-            <a class="add-portfolio" href="#">+ Add Portfolio</a>
-        </div>
-    
-        <div id="portfolio-section">
-            <div v-for="portfolio in portfolios">
-                <portfolio-slat :pfp="portfolio.pfp" :major="portfolio.major" :name="portfolio.name" :blurb="portfolio.blurb" :chips="portfolio.chips" :photo1="portfolio.photo1" :photo2="portfolio.photo2" :link="portfolio.link"></portfolio-slat>
-            </div>
-        </div>
-        <!--demo-->
-    </b-container>
 
-    <!--Add a portfolio WIP-->
     <b-container id="add-portfolio" fluid>
         <div>
             <b-form @submit="addPortfolio">
@@ -63,8 +45,7 @@
 
         </div>
     </b-container>
-
-    <!---scripts-->
+    
     <script src="scripts/components.js"></script>
     <script src="scripts/main.js"></script>
 </body>

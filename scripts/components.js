@@ -45,7 +45,6 @@ Vue.component('portfolio-sidebar', {
                     </form>
 
                         <h2 class="refine">Refine your search.</h2>
-                        <hr class="solid">
                         <div class="categories">
                         <b-dropdown text="Major" variant="outline" class="m-2">
                             <b-dropdown-item>College of Art and Design</b-dropdown-item>
