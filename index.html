@@ -9,7 +9,8 @@
     <!-- Load required Bootstrap and BootstrapVue CSS -->
     <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://unpkg.com/vue-navigation-bar@1.0.0/dist/vue-navigation-bar.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://unpkg.com/vue-navigation-bar@1.0.0/dist/vue-navigation-bar.css">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <!-- Load polyfills to support older browsers -->
@@ -23,47 +24,76 @@
 
     <!-- Load the following for BootstrapVueIcons support -->
     <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
-    
+    <script src="https://unpkg.com/vuex@2.0.0"></script>
+
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<<<<<<< Updated upstream
     
       <!--Link for Font awesome icons-->  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 
     
+=======
+
+>>>>>>> Stashed changes
     <title>RIT Portfolios - Rework</title>
 
 </head>
 
 <body>
-    
-<b-container id="root" fluid>
-    
+
+    <b-container id="root" fluid v-if="!store.state.showForm">
+
         <div id="filters-container">
             <!--Insert filter menu here-->
             <div id="search-categories-container" v-for="sidebar in sidebars">
                 <portfolio-sidebar :title="sidebar.title"></portfolio-sidebar>
             </div>
-            <a class="add-portfolio" href="#">+ Add Portfolio</a>
+            <a class="add-portfolio" href="#" v-on:click="add">+ Add Portfolio</a>
         </div>
-    
+
         <div id="portfolio-section">
             <div v-for="portfolio in portfolios">
-                <portfolio-slat :pfp="portfolio.pfp" :major="portfolio.major" :name="portfolio.name" :blurb="portfolio.blurb" :chips="portfolio.chips" :photo1="portfolio.photo1" :photo2="portfolio.photo2" :link="portfolio.link"></portfolio-slat>
+                <portfolio-slat :pfp="portfolio.pfp" :major="portfolio.major" :name="portfolio.name"
+                    :blurb="portfolio.blurb" :chips="portfolio.chips" :photo1="portfolio.photo1"
+                    :photo2="portfolio.photo2" :link="portfolio.link"></portfolio-slat>
             </div>
         </div>
         <!--demo-->
     </b-container>
 
     <!--Add a portfolio WIP-->
-    <b-container id="add-portfolio" fluid>
+    <b-container id="add-portfolio" fluid v-if="store.state.showForm">
         <div>
             <b-form @submit="addPortfolio">
-                <b-form-group id="input-group-1" label="Year and Major :" label-for="input-1">
-                    <b-form-input id="input-1" v-model="major" required
+                <b-form-group id="input-group-major" label="*Year and Major:" label-for="input-major">
+                    <b-form-input id="input-major" v-model="major" required
                         placeholder="Enter with the format '[number] year [Major] (BFA, BS, etc.)'"></b-form-input>
-                    <b-button type="submit" variant="primary">Submit</b-button>
                 </b-form-group>
+                <b-form-group id="input-group-name" label="*Name:" label-for="input-name">
+                    <b-form-input id="input-name" v-model="name" required
+                        placeholder="Please enter your first and last name"></b-form-input>
+                </b-form-group>
+                <b-form-group id="input-group-pronouns" label="Preferred Pronouns:" label-for="input-pronouns">
+                    <b-form-input id="input-pronouns"
+                        placeholder="Please enter your preferred pronouns (he/him, she/her, they/them, etc.)">
+                    </b-form-input>
+                </b-form-group>
+                <b-form-group id="input-group-blurb" label="*Description:" label-for="input-blurb">
+                    <b-form-textarea id="input-blurb" v-model="blurb"
+                        placeholder="Write a small description about yourself" rows="3" max-rows="6" required>
+                    </b-form-textarea>
+                </b-form-group>
+                <b-form-group id="input-group-skills" label="*Skills/Specializations:" label-for="input-skills">
+                    <b-form-input id="input-skills" v-model="chips" required
+                        placeholder="Please separate each skill with a comma using the format: Skill1, Skill2, Skill3, etc."></b-form-input>
+                </b-form-group>
+                <b-form-group id="input-group-link" label="*Portfolio Link:" label-for="input-link">
+                    <b-form-input id="input-link" v-model="link" required
+                        placeholder="Please enter a link to your portfolio website"></b-form-input>
+                </b-form-group>
+                <b-button type="submit" variant="primary">Submit</b-button>
             </b-form>
         </div>
     </b-container>

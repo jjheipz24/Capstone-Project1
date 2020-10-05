@@ -1,3 +1,4 @@
+//portfolios array
 let portfolios = [{
         pfp: 'images/placeholder-pfp.png',
         major: '4 year New Media Design (BFA)',
@@ -41,6 +42,19 @@ let portfolios = [{
     },
 
 ];
+
+//stores showForm toggle state
+//allows value showForm to be changed in both Vue instances
+const store = new Vuex.Store({
+    state: {
+        showForm: false,
+    },
+
+    mutations: {
+        add: state => state.showForm = true,
+    }
+});
+
 let app = new Vue({
     el: '#root',
     data: {
@@ -52,6 +66,12 @@ let app = new Vue({
             //insert majors, year, skills, job filters
         ],
     },
+    methods: {
+        add() {
+            store.commit('add');
+            //console.log(store.state.showForm);
+        }
+    }
 });
 
 let portfolioAdd = new Vue({
@@ -59,21 +79,32 @@ let portfolioAdd = new Vue({
     data: {
         portfolios,
         major: '',
+        name: '',
+        blurb: "",
+        chips: "",
+        link: ""
     },
 
     methods: {
         addPortfolio(evt) {
             evt.preventDefault();
-            portfolios.push({
+            portfolios.unshift({
                 pfp: 'images/placeholder-pfp.png',
                 major: this.major,
-                name: 'Anne Elliott',
-                blurb: "I am a UX designer fascinated with the intersection between art, technology and sound. I have an undying passion for learning, experimenting, and creating unique experiences grounded in empathy.",
-                chips: ["Visual Design", "UI/UX Design", "3D", "Motion Graphics"],
-                photo1: 'images/elliott_photo1.jpg',
-                photo2: 'images/elliott_photo2.jpg',
-                link: "http://http://anneelliott.design/"
-            })
+                name: this.name,
+                blurb:  this.blurb,
+                chips: this.createChips(this.chips),
+                photo1: 'images/placeholder-project1.jpg',
+                photo2: 'images/placeholder-project2.jpg',
+                link: this.link,
+            });
+
+            store.state.showForm = false;
+        },
+
+        createChips(chips){
+            let newChipArr = chips.split(",");
+            return newChipArr;
         }
     }
 })
