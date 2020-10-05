@@ -266,6 +266,31 @@ body {
     background-color: #fafafa;
 }
 
+form {
+    font-family: $primary-font;
+}
+
+.form-control {
+    border: none !important;
+    border-bottom: 2px solid #aaaaaa !important;
+    border-radius: 0px !important;
+}
+
+.form-control:focus {
+    border-bottom: 2px solid #000000 !important;
+    color: #000000 !important;
+}
+
+.d-block {
+    font-family: Neue Bold;
+    font-size: 1.3em;
+}
+
+button.btn.btn-primary {
+    background-color: #F76902 !important;
+}
+
+
 
 /*# sourceMappingURL=styles.css.map */
 
