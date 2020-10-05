@@ -38,7 +38,7 @@ Vue.component('portfolio-sidebar', {
 
                     <form class="searchbar">
                         <div class="searchbar-input">
-     <i class="icon-search"></i>
+                        <i class="icon-search"></i>
                         <input class="searchterm" type="search" placeholder="Search by major, skills, etc.">
                         <a href="#" class="searchbar-clear"></a>
                         </div>
@@ -46,52 +46,59 @@ Vue.component('portfolio-sidebar', {
 
                         <h2 class="refine">Refine your search.</h2>
                         <div class="categories">
-                        <b-dropdown text="Major" variant="outline" class="m-2">
-                            <b-dropdown-item>College of Art and Design</b-dropdown-item>
-                            <b-dropdown-divider></b-dropdown-divider>
-                            <b-dropdown-item>New Media Design (BFA)</b-dropdown-item>
-                            <b-dropdown-item>Graphic Design (BFA)</b-dropdown-item>
-                            <b-dropdown-item>Golisano College of Computing and Information Sciences</b-dropdown-item>
+                            <div class="dropdown">
+                                <div class="select">
+                                    <span class="dropdown-toggle" data-toggle="dropdown">Major</span>
+                                </div>
+                                    <input type="hidden" name="category">
+                                    <ul class="dropdown-menu">
+                                <li id="art">College of Art and Design</li>
+                                <li id="golisano">Golisano College of Computing and Information Sciences</li>
+                                    </ul>
+                            </div>
 
-                            <b-dropdown-item>Grad Student</b-dropdown-item>
-                            <b-dropdown-divider></b-dropdown-divider>
-                            </b-dropdown>
-                        </div>
+                        <hr class="solid">
+                            <div class="dropdown">
+                                <div class="select">
+                                    <span class="dropdown-toggle" data-toggle="dropdown">Year</span>
+                                </div>
+                                    <input type="hidden" name="category">
+                                    <ul class="dropdown-menu">
+                                <li id="first">First Year</li>
+                                <li id="second">Second Year</li>
+                                <li id="third">Third Year</li>
+                                <li id="fourth">Fourth Year</li>
+                                <li id="fifth">Fifth Year</li>
+                                    </ul>
+                            </div>
 
-                        <div class="categories">
-                        <b-dropdown text="Year" variant="outline" class="m-2">
-                            <b-dropdown-item>First Year</b-dropdown-item>
-                            <b-dropdown-item>Second Year</b-dropdown-item>
-                            <b-dropdown-item>Third Year</b-dropdown-item>
-                            <b-dropdown-item>Fourth Year</b-dropdown-item>
-                            <b-dropdown-item>Fifth Year</b-dropdown-item>
-                            <b-dropdown-item>Grad Student</b-dropdown-item>
-                            <b-dropdown-divider></b-dropdown-divider>
-                            </b-dropdown>
-                        </div>
+                        <hr class="solid">
+                            <div class="dropdown">
+                                <div class="select">
+                                    <span class="dropdown-toggle" data-toggle="dropdown">Skills</span>
+                                </div>
+                                    <input type="hidden" name="category">
+                                    <ul class="dropdown-menu">
+                                <li id="art">College of Art and Design</li>
+                                <li id="golisano">Golisano College of Computing and Information Sciences</li>
+                                    </ul>
+                            </div>
 
-                        <div class="categories">
-                        <b-dropdown text="Skills" variant="outline" class="m-2">
-                            <b-dropdown-item>New Media Design</b-dropdown-item>
-                            <b-dropdown-item>New Media Interactive Development</b-dropdown-item>
-                            <b-dropdown-divider></b-dropdown-divider>
-                            <b-dropdown-item>College of Arts</b-dropdown-item>
-                            <b-dropdown-divider></b-dropdown-divider>
-                            </b-dropdown>
-                        </div>
-
-                        <div class="categories">
-                        <b-dropdown text="Job Type" variant="outline" class="m-2">
-                            <b-dropdown-item>New Media Design</b-dropdown-item>
-                            <b-dropdown-item>New Media Interactive Development</b-dropdown-item>
-                            <b-dropdown-divider></b-dropdown-divider>
-                            <b-dropdown-item>College of Arts</b-dropdown-item>
-                            <b-dropdown-divider></b-dropdown-divider>
-                            </b-dropdown>
-                        </div>
+                        <hr class="solid">
+                            <div class="dropdown">
+                                <div class="select">
+                                    <span class="dropdown-toggle" data-toggle="dropdown">Job Type</span>
+                                </div>
+                                    <input type="hidden" name="category">
+                                    <ul class="dropdown-menu">
+                                <li id="art">College of Art and Design</li>
+                                <li id="golisano">Golisano College of Computing and Information Sciences</li>
+                                    </ul>
+                            </div>
                     </div>
                </div>`
 });
+
 
 
 
