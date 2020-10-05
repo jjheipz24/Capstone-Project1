@@ -128,3 +128,61 @@ body{
       }
       
 }
+
+/* Portfolio Mobile Styles */
+
+
+/* Filtering component */
+.title {
+    font-size: 32px;
+    color: #222222;
+    padding-top: 3px;
+    font-family: Neue Bold;
+    margin-left: 20px;
+    margin-top: 30px;
+    font-weight: 900;
+}
+
+.categories {
+    margin: 15px;
+    width: 100%;
+}
+
+
+/* Solid border */
+hr.solid {
+    border-top: 1px solid #bbb;
+    width: 85%;
+}
+
+
+.refine {
+    font-size: 16px;
+    color: #222222;
+    padding-top: 3px;
+    font-family: Neue Bold;
+    margin-left: 28px;
+    margin-top: 30px;
+    font-weight: 900;
+}
+
+.searchterm {
+    border-radius: 50px;
+    border: solid 1px grey;
+    margin: 20px 10px 10px 10px;
+    padding-left: 27px;
+    font-size: 13px;
+    width: 240px;
+    height: 42px;
+}
+
+.dropdown-menu {
+    color: #fafafa;
+    border: 1px solid #fafafa;
+    color: black;
+}
+
+/* Filtering Mobile Styles */
+
+
+/*# sourceMappingURL=styles.css.map */
