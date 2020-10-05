@@ -38,23 +38,29 @@ Vue.component('portfolio-sidebar', {
 
                     <form class="searchbar">
                         <div class="searchbar-input">
-                        <input type="search" placeholder="Search in items">
+     <i class="icon-search"></i>
+                        <input class="searchterm" type="search" placeholder="Search by major, skills, etc.">
                         <a href="#" class="searchbar-clear"></a>
                         </div>
                     </form>
-                        <h2 class="refine">Refine your search</h2>
+
+                        <h2 class="refine">Refine your search.</h2>
+                        <hr class="solid">
                         <div class="categories">
-                        <b-dropdown class="categories" text="Major">
-                            <b-dropdown-item>New Media Design</b-dropdown-item>
-                            <b-dropdown-item>New Media Interactive Development</b-dropdown-item>
+                        <b-dropdown text="Major" variant="outline" class="m-2">
+                            <b-dropdown-item>College of Art and Design</b-dropdown-item>
                             <b-dropdown-divider></b-dropdown-divider>
-                            <b-dropdown-item>College of Arts</b-dropdown-item>
+                            <b-dropdown-item>New Media Design (BFA)</b-dropdown-item>
+                            <b-dropdown-item>Graphic Design (BFA)</b-dropdown-item>
+                            <b-dropdown-item>Golisano College of Computing and Information Sciences</b-dropdown-item>
+
+                            <b-dropdown-item>Grad Student</b-dropdown-item>
                             <b-dropdown-divider></b-dropdown-divider>
                             </b-dropdown>
                         </div>
 
                         <div class="categories">
-                        <b-dropdown class="categories" text="Year">
+                        <b-dropdown text="Year" variant="outline" class="m-2">
                             <b-dropdown-item>First Year</b-dropdown-item>
                             <b-dropdown-item>Second Year</b-dropdown-item>
                             <b-dropdown-item>Third Year</b-dropdown-item>
@@ -66,7 +72,7 @@ Vue.component('portfolio-sidebar', {
                         </div>
 
                         <div class="categories">
-                        <b-dropdown class="categories" text="Skills">
+                        <b-dropdown text="Skills" variant="outline" class="m-2">
                             <b-dropdown-item>New Media Design</b-dropdown-item>
                             <b-dropdown-item>New Media Interactive Development</b-dropdown-item>
                             <b-dropdown-divider></b-dropdown-divider>
@@ -76,7 +82,7 @@ Vue.component('portfolio-sidebar', {
                         </div>
 
                         <div class="categories">
-                        <b-dropdown class="categories" text="Job Type">
+                        <b-dropdown text="Job Type" variant="outline" class="m-2">
                             <b-dropdown-item>New Media Design</b-dropdown-item>
                             <b-dropdown-item>New Media Interactive Development</b-dropdown-item>
                             <b-dropdown-divider></b-dropdown-divider>
