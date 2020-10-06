@@ -16,7 +16,7 @@
 html {
   height: 100%;
   min-width: 100%;
-  font-family: Neue Regular, sans-serif, Arial, Helvetica, sans-serif;
+  font-family: Neue Regular, Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
 
@@ -293,6 +293,30 @@ body {
 
 .dropdown .dropdown-menu li:active {
   background-color: #fafafa;
+}
+
+form {
+  font-family: Neue Regular, sans-serif;
+}
+
+.form-control {
+  border: none !important;
+  border-bottom: 2px solid #aaaaaa !important;
+  border-radius: 0px !important;
+}
+
+.form-control:focus {
+  border-bottom: 2px solid #000000 !important;
+  color: #000000 !important;
+}
+
+.d-block {
+  font-family: Neue Bold;
+  font-size: 1.3em;
+}
+
+button.btn.btn-primary {
+  background-color: #F76902 !important;
 }
 /**************** ADD PORTFOLIO FORM ************/
 /*# sourceMappingURL=styles.css.map */

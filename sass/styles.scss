@@ -16,6 +16,7 @@
 $primary-font: Neue Regular,
 sans-serif;
 $border: 1px solid #cfcfcf;
+$rit-orange: #F76902;
 
 html {
     height: 100%;
@@ -121,7 +122,7 @@ body {
     }
 
     .view-portfolio {
-        color: #F76902;
+        color: $rit-orange;
         font-family: Neue Bold;
         float: right;
         margin: 15px;
@@ -139,81 +140,83 @@ body {
 
 /* Filtering component */
 .title {
-  font-size: 32px;
-  color: #222222;
-  padding-top: 3px;
-  font-family: Neue Bold;
-  margin-left: 20px;
-  margin-top: 30px;
-  font-weight: 900;
+    font-size: 32px;
+    color: #222222;
+    padding-top: 3px;
+    font-family: Neue Bold;
+    margin-left: 20px;
+    margin-top: 30px;
+    font-weight: 900;
 }
 
 .categories {
-  margin: 15px;
-  width: 100%;
+    margin: 15px;
+    width: 100%;
 }
 
 .refine {
-  font-size: 16px;
-  color: #222222;
-  font-family: Neue Bold;
-  border-bottom: 1px solid #cfcfcf;
-  padding-bottom: 15px;
-  margin-left: 28px;
-  margin-top: 30px;
-  width: 75%;
-  font-weight: bold;
+    font-size: 16px;
+    color: #222222;
+    font-family: Neue Bold;
+    border-bottom: 1px solid #cfcfcf;
+    padding-bottom: 15px;
+    margin-left: 28px;
+    margin-top: 30px;
+    width: 75%;
+    font-weight: bold;
 }
 
 .searchterm {
-  border-radius: 50px;
-  border: solid 1px grey;
-  margin: 20px 10px 10px 10px;
-  padding-left: 27px;
-  font-size: 13px;
-  width: 18vw;
-  height: 42px;
+    border-radius: 50px;
+    border: solid 1px grey;
+    margin: 20px 10px 10px 10px;
+    padding-left: 27px;
+    font-size: 13px;
+    width: 18vw;
+    height: 42px;
 }
 
 .dropdown-menu {
-  color: #fafafa;
-  border: 1px solid #fafafa;
-  color: black;
+    color: #fafafa;
+    border: 1px solid #fafafa;
+    color: black;
 }
 
 #search-categories-container {
-  margin-bottom: 200px;
+    margin-bottom: 200px;
 }
 
 .add-portfolio {
-  color: #F76902;
-  font-family: Neue Bold;
-  font-size: 16px;
+    color: $rit-orange;
+    font-family: Neue Bold;
+    font-size: 16px;
 }
 
 .add-portfolio:hover {
-  color: #222222;
-  text-decoration: none;
+    color: #222222;
+    text-decoration: none;
 }
 
 /*Styling Selectbox*/
 .dropdown {
-  width: 300px;
-  display: inline-block;
-  background-color: #fafafa;
-  transition: all .5s ease;
-  position: relative;
-  font-size: 14px;
-  color: #474747;
-  height: 100%;
-  text-align: left
+    width: 300px;
+    display: inline-block;
+    background-color: #fafafa;
+    transition: all .5s ease;
+    position: relative;
+    font-size: 14px;
+    color: #474747;
+    height: 100%;
+    text-align: left
 }
+
 .dropdown .select {
     cursor: pointer;
     display: block;
     padding: 10px
 }
-.dropdown .select > i {
+
+.dropdown .select>i {
     font-size: 13px;
     color: #888;
     cursor: pointer;
@@ -221,21 +224,26 @@ body {
     float: right;
     line-height: 20px
 }
+
 .dropdown:hover {
     box-shadow: 0 0 4px rgb(204, 204, 204)
 }
+
 .dropdown:active {
     background-color: #fafafa;
 }
+
 .dropdown.active:hover,
 .dropdown.active {
     box-shadow: 0 0 4px rgb(204, 204, 204);
     border-radius: 2px 2px 0 0;
     background-color: #fafafa;
 }
-.dropdown.active .select > i {
+
+.dropdown.active .select>i {
     transform: rotate(-90deg)
 }
+
 .dropdown .dropdown-menu {
     position: absolute;
     background-color: #fff;
@@ -250,18 +258,22 @@ body {
     overflow-y: auto;
     z-index: 9
 }
+
 .dropdown .dropdown-menu li {
     padding: 10px;
     transition: all .2s ease-in-out;
     cursor: pointer
-} 
+}
+
 .dropdown .dropdown-menu {
     padding: 0;
     list-style: none
 }
+
 .dropdown .dropdown-menu li:hover {
     background-color: #fafafa;
 }
+
 .dropdown .dropdown-menu li:active {
     background-color: #fafafa;
 }
@@ -287,7 +299,7 @@ form {
 }
 
 button.btn.btn-primary {
-    background-color: #F76902 !important;
+    background-color: $rit-orange !important;
 }
 
 

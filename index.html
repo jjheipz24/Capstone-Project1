@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" type="text/css" href="sass/styles.css">
 
     <!-- Load required Bootstrap and BootstrapVue CSS -->
     <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
@@ -28,10 +27,12 @@
 
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-      <!--Link for Font awesome icons-->  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-    
+
+    <!--Link for Font awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="sass/styles.css">
+
     <title>RIT Portfolios - Rework</title>
 
 </head>
@@ -82,13 +83,14 @@
                 </b-form-group>
                 <b-form-group id="input-group-skills" label="*Skills/Specializations:" label-for="input-skills">
                     <b-form-input id="input-skills" v-model="chips" required
-                        placeholder="Please separate each skill with a comma using the format: Skill1, Skill2, Skill3, etc."></b-form-input>
+                        placeholder="Please separate each skill with a comma using the format: Skill1, Skill2, Skill3, etc.">
+                    </b-form-input>
                 </b-form-group>
                 <b-form-group id="input-group-link" label="*Portfolio Link:" label-for="input-link">
                     <b-form-input id="input-link" v-model="link" required
                         placeholder="Please enter a link to your portfolio website"></b-form-input>
                 </b-form-group>
-                <b-button type="submit" variant="primary">Submit</b-button>
+                <b-button type="submit" variant="primary" id="test">Submit</b-button>
             </b-form>
         </div>
     </b-container>
