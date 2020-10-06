@@ -278,19 +278,25 @@ body {
     background-color: #fafafa;
 }
 
+/* add portfolio form styles */
+
 form {
     font-family: $primary-font;
 }
 
 .form-control {
     border: none !important;
-    border-bottom: 2px solid #aaaaaa !important;
+    border-bottom: 1px solid #aaaaaa !important;
     border-radius: 0px !important;
+    margin-bottom: 3em !important;
 }
 
 .form-control:focus {
     border-bottom: 2px solid #000000 !important;
     color: #000000 !important;
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .d-block {
@@ -298,11 +304,57 @@ form {
     font-size: 1.3em;
 }
 
-button.btn.btn-primary {
+#test.btn.btn-primary {
     background-color: $rit-orange !important;
+    text-transform: capitalize;
+    font-size: 1.2em;
+    border-radius: 24px;
 }
 
+#test.btn.btn-primary:focus {
+    background-color: #222222 !important;
+}
 
+#add-portfolio-heading {
+    font-family: Neue Bold;
+    border-bottom: 2px solid $rit-orange;
+    padding-bottom: 0.5em;
+    padding-top: 1em;
+    width: 25%;
+}
+
+/* nav for add portfolio */
+
+#nav-container {
+    display: flex;
+    justify-content: center;
+  }
+
+#portfolio-nav {
+  list-style-type: none;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+
+#portfolio-nav li {
+    float: left;
+    border-bottom: 2px solid $rit-orange;
+    margin-right: 2em;
+}
+
+#portfolio-nav li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+#portfolio-nav li a:hover {
+    font-family: Neue Bold;
+    border-bottom: 3px solid $rit-orange;
+}
 
 /*# sourceMappingURL=styles.css.map */
 

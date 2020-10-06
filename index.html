@@ -62,6 +62,16 @@
     <!--Add a portfolio WIP-->
     <b-container id="add-portfolio" fluid v-if="store.state.showForm">
         <div>
+            <h1 id="add-portfolio-heading">Add a Portfolio</h1>
+            <div id="nav-container">
+            <ul id="portfolio-nav">
+                <li><a href="#personal-info">Personal Information</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#preview">Preview</a></li>
+              </ul>
+            </div>
             <b-form @submit="addPortfolio">
                 <b-form-group id="input-group-major" label="*Year and Major:" label-for="input-major">
                     <b-form-input id="input-major" v-model="major" required
