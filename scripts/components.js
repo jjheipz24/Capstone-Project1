@@ -79,11 +79,12 @@ Vue.component('portfolio-sidebar', {
                                 </div>
                                     <input type="hidden" name="category">
                                     <ul class="dropdown-menu">
-                                <li id="first">First Year</li>
-                                <li id="second">Second Year</li>
-                                <li id="third">Third Year</li>
-                                <li id="fourth">Fourth Year</li>
-                                <li id="fifth">Fifth Year</li>
+                                        <li id="first">First Year</li>
+                                        <li id="second">Second Year</li>
+                                        <li id="third">Third Year</li>
+                                        <li id="fourth">Fourth Year</li>
+                                        <li id="fifth">Fifth Year</li>
+                                        <li id="golisano">Graduate Student</li>
                                     </ul>
                             </div>
 
