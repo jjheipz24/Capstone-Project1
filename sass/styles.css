@@ -295,10 +295,6 @@ body {
   background-color: #fafafa;
 }
 
-#bold {
-    font-weight: bold;
-}
-
 /* add portfolio form styles */
 form {
   font-family: Neue Regular, sans-serif;
@@ -348,6 +344,10 @@ form {
   padding-bottom: 0.5em;
   padding-top: 1em;
   width: 25%;
+}
+
+#bold {
+  font-weight: bold;
 }
 
 /* nav for add portfolio */

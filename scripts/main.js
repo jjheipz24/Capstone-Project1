@@ -2,6 +2,16 @@
 let portfolios = [{
         pfp: 'images/placeholder-pfp.png',
         major: '4 year New Media Design (BFA)',
+        name: 'Hannah Sarakin',
+        blurb: "I am a UI and visual designer who is also exploring the world of handmade crafts. Driven, passionate, and detail-oriented. I like to say I am a perfectionist and nit-picker in the best way possible.",
+        chips: ["Full-Time", "UI", "Illustration", "Paper Crafts", "Graphic Design", "Visual Design"],
+        photo1: 'images/sarakin_photo1.png',
+        photo2: 'images/sarakin_photo2.png',
+        link: "https://hannahgsarakin.com/"
+    },
+    {
+        pfp: 'images/placeholder-pfp.png',
+        major: '4 year New Media Design (BFA)',
         name: 'Anne Elliott',
         blurb: "I am a UX designer fascinated with the intersection between art, technology and sound. I have an undying passion for learning, experimenting, and creating unique experiences grounded in empathy.",
         chips: ["Visual Design", "UI/UX Design", "3D", "Motion Graphics"],
@@ -92,7 +102,7 @@ let portfolioAdd = new Vue({
                 pfp: 'images/placeholder-pfp.png',
                 major: this.major,
                 name: this.name,
-                blurb:  this.blurb,
+                blurb: this.blurb,
                 chips: this.createChips(this.chips),
                 photo1: 'images/placeholder-project1.jpg',
                 photo2: 'images/placeholder-project2.jpg',
@@ -102,7 +112,7 @@ let portfolioAdd = new Vue({
             store.state.showForm = false;
         },
 
-        createChips(chips){
+        createChips(chips) {
             let newChipArr = chips.split(",");
             return newChipArr;
         }
@@ -112,23 +122,23 @@ let portfolioAdd = new Vue({
 
 /*Dropdown Menu*/
 $('.dropdown').click(function () {
-        $(this).attr('tabindex', 1).focus();
-        $(this).toggleClass('active');
-        $(this).find('.dropdown-menu').slideToggle(300);
-    });
-    $('.dropdown').focusout(function () {
-        $(this).removeClass('active');
-        $(this).find('.dropdown-menu').slideUp(300);
-    });
-    $('.dropdown .dropdown-menu li').click(function () {
-        $(this).parents('.dropdown').find('span').text($(this).text());
-        $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
-    });
+    $(this).attr('tabindex', 1).focus();
+    $(this).toggleClass('active');
+    $(this).find('.dropdown-menu').slideToggle(300);
+});
+$('.dropdown').focusout(function () {
+    $(this).removeClass('active');
+    $(this).find('.dropdown-menu').slideUp(300);
+});
+$('.dropdown .dropdown-menu li').click(function () {
+    $(this).parents('.dropdown').find('span').text($(this).text());
+    $(this).parents('.dropdown').find('input').attr('value', $(this).attr('id'));
+});
 /*End Dropdown Menu*/
 
 
 $('.dropdown-menu li').click(function () {
-  var input = '<strong>' + $(this).parents('.dropdown').find('input').val() + '</strong>',
-      msg = '<span class="msg">Hidden input value: ';
-  $('.msg').html(msg + input + '</span>');
-}); 
+    var input = '<strong>' + $(this).parents('.dropdown').find('input').val() + '</strong>',
+        msg = '<span class="msg">Hidden input value: ';
+    $('.msg').html(msg + input + '</span>');
+});
