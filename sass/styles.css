@@ -295,6 +295,10 @@ body {
   background-color: #fafafa;
 }
 
+#bold {
+    font-weight: bold;
+}
+
 /* add portfolio form styles */
 form {
   font-family: Neue Regular, sans-serif;

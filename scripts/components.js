@@ -52,8 +52,23 @@ Vue.component('portfolio-sidebar', {
                                 </div>
                                     <input type="hidden" name="category">
                                     <ul class="dropdown-menu">
-                                <li id="art">College of Art and Design</li>
-                                <li id="golisano">Golisano College of Computing and Information Sciences</li>
+                                <li id="bold">College of Art and Design</li>
+                                <li id="art">New Media Design (BFA)</li>
+                                <li id="art">Graphic Design (BFA)</li>
+                                <li id="art">Visual Communication Design (BFA)</li>
+                                <li id="art">3D Digital Design (BFA)</li>
+                                <li id="art">Industrial Design (BFA)</li>
+                                <li id="art">Industrial Design (MFA)</li>
+                                <li id="art">Interior Design (BFA)</li>
+                                <li id="art">Illustration (BFA)</li>
+                                <li id="art">Motion Picture Science(BS)</li>
+                                <li id="bold">Golisano College of Computing and Information Sciences</li>
+                                <li id="art">Game Design and Development(BS)</li>
+                                <li id="art">New Media Interactive Development (BS)</li>
+                               <li id="art">Computer Science(BS)</li>
+                                <li id="art">Software Engineering(MS)</li>
+                                <li id="art">Human-Computer Interaction(BS)</li>
+
                                     </ul>
                             </div>
 
@@ -79,8 +94,16 @@ Vue.component('portfolio-sidebar', {
                                 </div>
                                     <input type="hidden" name="category">
                                     <ul class="dropdown-menu">
-                                <li id="art">College of Art and Design</li>
-                                <li id="golisano">Golisano College of Computing and Information Sciences</li>
+                                        <li id="bold">Design</li>
+                                        <li id="golisano">Visual Design</li>
+                                        <li id="golisano">Interactive Design</li>
+                                        <li id="golisano">3D</li>
+                                        <li id="golisano">Motion Graphics</li>
+                                        <li id="golisano">UI/UX Design</li>
+                                        <li id="bold">Programming</li>
+                                        <li id="golisano">Front end</li>
+                                        <li id="golisano">Back end</li>
+                                        <li id="golisano">Full stack</li>
                                     </ul>
                             </div>
 
@@ -91,8 +114,9 @@ Vue.component('portfolio-sidebar', {
                                 </div>
                                     <input type="hidden" name="category">
                                     <ul class="dropdown-menu">
-                                <li id="art">College of Art and Design</li>
-                                <li id="golisano">Golisano College of Computing and Information Sciences</li>
+                                        <li id="art">Co-Op</li>
+                                        <li id="golisano">Internship</li>
+                                        <li id="golisano">Full Time</li>
                                     </ul>
                             </div>
                     </div>
