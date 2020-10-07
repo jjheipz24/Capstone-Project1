@@ -300,11 +300,17 @@ form {
   font-family: Neue Regular, sans-serif;
 }
 
+#form-container {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
 .form-control {
   border: none !important;
   border-bottom: 1px solid #aaaaaa !important;
   border-radius: 0px !important;
   margin-bottom: 3em !important;
+  background-color: #fafafa;
 }
 
 .form-control:focus {
@@ -313,6 +319,7 @@ form {
   border-color: inherit;
   -webkit-box-shadow: none;
   box-shadow: none;
+  background-color: #fafafa;
 }
 
 .d-block {
@@ -320,14 +327,14 @@ form {
   font-size: 1.3em;
 }
 
-#test.btn.btn-primary {
+#test.btn.btn-primary, .next-btn {
   background-color: #F76902 !important;
   text-transform: capitalize;
-  font-size: 1.2em;
+  font-size: 1.1em;
   border-radius: 24px;
 }
 
-#test.btn.btn-primary:focus {
+#test.btn.btn-primary:focus, .next-btn:focus {
   background-color: #222222 !important;
 }
 
@@ -364,15 +371,71 @@ form {
 
 #portfolio-nav li a {
   text-decoration: none;
-  color: black;
+  color: #000;
   display: block;
   text-align: center;
   padding: 14px 16px;
 }
 
 #portfolio-nav li a:hover {
-  font-family: Neue Bold;
+  font-weight: bold;
   border-bottom: 3px solid #F76902;
+}
+
+#portfolio-nav li a:active {
+  font-weight: bold;
+  border-bottom: 3px solid #F76902;
+}
+
+#personal-info-link a {
+  font-weight: bold;
+  border-bottom: 3px solid #F76902;
+}
+
+#top-nav {
+  width: 100%;
+  height: 70px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+#portfolio-title {
+  font-family: Neue Bold;
+  font-size: 2em;
+  line-height: 70px;
+  padding-left: 20px;
+}
+
+#back-to-home a {
+  font-family: Neue Regular, sans-serif;
+  float: right;
+  line-height: 70px;
+  font-weight: bold;
+  padding-right: 20px;
+  color: #F76902;
+}
+
+#back-to-home a:hover {
+  color: #222222;
+  text-decoration: none;
+}
+
+.information-divs {
+  display: none;
+}
+
+.information-divs:target {
+  display: block !important;
+  background-color: #fafafa;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 25px 25px 25px;
+  margin-bottom: 20px;
+}
+
+#button-div {
+  text-align: center;
 }
 /**************** ADD PORTFOLIO FORM ************/
 /*# sourceMappingURL=styles.css.map */

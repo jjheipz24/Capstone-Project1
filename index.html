@@ -46,7 +46,7 @@
             <div id="search-categories-container" v-for="sidebar in sidebars">
                 <portfolio-sidebar :title="sidebar.title"></portfolio-sidebar>
             </div>
-            <a class="add-portfolio" href="#" v-on:click="add">+ Add Portfolio</a>
+            <a class="add-portfolio" href="#personal-info-div" v-on:click="add">+ Add Portfolio</a>
         </div>
 
         <div id="portfolio-section">
@@ -62,21 +62,20 @@
     <!--Add a portfolio WIP-->
     <b-container id="add-portfolio" fluid v-if="store.state.showForm">
         <div>
+            <div id="top-nav"><span id="portfolio-title">RIT Portfolios</span><span id="back-to-home"><a href="">&lt; Back To Home</a></span></div>
+            <div id="form-container">
             <h1 id="add-portfolio-heading">Add a Portfolio</h1>
             <div id="nav-container">
             <ul id="portfolio-nav">
-                <li><a href="#personal-info">Personal Information</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#preview">Preview</a></li>
+                <li id="personal-info-link" ><a href="#personal-info-div" onclick="changeColor(this)" class="small-nav" id='p-nav'>Personal Information</a></li>
+                <li id="education-link"><a href="#education-div" onclick="changeColor(this)" class="small-nav" id='e-nav'>Education</a></li>
+                <li id="skills-info-link"><a href="#skills-div" onclick="changeColor(this)" class="small-nav" id='s-nav'>Skills</a></li>
+                <li id="portfolio-info-link"><a href="#portfolio-div" onclick="changeColor(this)" class="small-nav" id='po-nav'>Portfolio</a></li>
+                <!--<li id="personal-info-link"><a href="#preview">Preview</a></li>-->
               </ul>
             </div>
             <b-form @submit="addPortfolio">
-                <b-form-group id="input-group-major" label="*Year and Major:" label-for="input-major">
-                    <b-form-input id="input-major" v-model="major" required
-                        placeholder="Enter with the format '[number] year [Major] (BFA, BS, etc.)'"></b-form-input>
-                </b-form-group>
+                <div id="personal-info-div" class="information-divs">
                 <b-form-group id="input-group-name" label="*Name:" label-for="input-name">
                     <b-form-input id="input-name" v-model="name" required
                         placeholder="Please enter your first and last name"></b-form-input>
@@ -86,28 +85,75 @@
                         placeholder="Please enter your preferred pronouns (he/him, she/her, they/them, etc.)">
                     </b-form-input>
                 </b-form-group>
-                <b-form-group id="input-group-blurb" label="*Description:" label-for="input-blurb">
-                    <b-form-textarea id="input-blurb" v-model="blurb"
-                        placeholder="Write a small description about yourself" rows="3" max-rows="6" required>
-                    </b-form-textarea>
+                <div id="button-div">
+                <b-button type="submit" variant="primary" href="#education-div" class="next-btn" onclick="changeColorBtn('#e-nav')">Continue</b-button>
+                </div>
+                </div>
+                <div id="education-div" class="information-divs">
+                <b-form-group id="input-group-major" label="*Year and Major:" label-for="input-major">
+                    <b-form-input id="input-major" v-model="major" required
+                        placeholder="Enter with the format '[number] year [Major] (BFA, BS, etc.)'"></b-form-input>
                 </b-form-group>
+                <div id="button-div">
+                    <b-button type="submit" variant="primary" href="#skills-div" class="next-btn" onclick="changeColorBtn('#s-nav')">Continue</b-button>
+                    </div>
+                </div>
+                <div id="skills-div" class="information-divs">
                 <b-form-group id="input-group-skills" label="*Skills/Specializations:" label-for="input-skills">
                     <b-form-input id="input-skills" v-model="chips" required
                         placeholder="Please separate each skill with a comma using the format: Skill1, Skill2, Skill3, etc.">
                     </b-form-input>
                 </b-form-group>
+                <div id="button-div">
+                    <b-button type="submit" variant="primary" href="#portfolio-div" class="next-btn" onclick="changeColorBtn('#po-nav')">Continue</b-button>
+                    </div>
+                </div>
+                <div id="portfolio-div" class="information-divs">
                 <b-form-group id="input-group-link" label="*Portfolio Link:" label-for="input-link">
                     <b-form-input id="input-link" v-model="link" required
                         placeholder="Please enter a link to your portfolio website"></b-form-input>
                 </b-form-group>
-                <b-button type="submit" variant="primary" id="test">Submit</b-button>
+                <b-form-group id="input-group-blurb" label="*Description:" label-for="input-blurb">
+                    <b-form-textarea id="input-blurb" v-model="blurb"
+                        placeholder="Write a small description about yourself" rows="3" max-rows="6" required>
+                    </b-form-textarea>
+                </b-form-group>
+                <div id="button-div">
+                    <b-button type="submit" variant="primary" id="test">Submit</b-button>
+                </div>
+                </div>
+                
             </b-form>
+        </div>
         </div>
     </b-container>
 
     <!---scripts-->
     <script src="scripts/components.js"></script>
     <script src="scripts/main.js"></script>
+    <script>
+        function changeColor(e) {
+            console.log(e);
+            console.log(document.querySelectorAll('.small-nav'));
+            let listElements = document.querySelectorAll('.small-nav');
+            for(let i=0; i<listElements.length; i++) {
+                listElements[i].style.fontWeight = "normal";
+                listElements[i].style.borderBottom = "0px solid #F76902";
+            }
+            e.style.fontWeight = "bold";
+            e.style.borderBottom = "3px solid #F76902";
+        }
+        function changeColorBtn(e) {
+            let navToChange = document.querySelector(e);
+            let listElements = document.querySelectorAll('.small-nav');
+            for(let i=0; i<listElements.length; i++) {
+                listElements[i].style.fontWeight = "normal";
+                listElements[i].style.borderBottom = "0px solid #F76902";
+            }
+            navToChange.style.fontWeight = "bold";
+            navToChange.style.borderBottom = "3px solid #F76902";
+        }
+    </script>
 </body>
 
 </html>
