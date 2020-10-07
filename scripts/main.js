@@ -17,7 +17,7 @@ let portfolios = [{
         chips: ["Visual Design", "UI/UX Design", "3D", "Motion Graphics"],
         photo1: 'images/elliott_photo1.jpg',
         photo2: 'images/elliott_photo2.jpg',
-        link: "http://http://anneelliott.design/"
+        link: "http://anneelliott.design/"
     },
     {
         pfp: 'images/placeholder-pfp.png',
